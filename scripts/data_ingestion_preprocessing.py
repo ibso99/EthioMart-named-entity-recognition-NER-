@@ -25,14 +25,24 @@ print(f"PHONE_NUMBER: {PHONE_NUMBER}")
 # @ethio_brand_collection
 # @Leyueqa
 # @sinayelj
-CHANNELS = ['@ZemenExpress', '@nevacomputer', '@meneshayeofficial', '@ethio_brand_collection', '@Leyueqa']
+# @Shewabrand
+# @helloomarketethiopia
+# @modernshoppingcenter
+# @qnashcom
+# @Fashiontera
+# @kuruwear
+CHANNELS = ['@ZemenExpress', '@nevacomputer', '@Shewabrand',
+            '@meneshayeofficial', '@ethio_brand_collection', '@Leyueqa'
+            '@sinayelj', '@helloomarketethiopia', '@modernshoppingcenter',
+            '@qnashcom', '@Fashiontera', '@kuruwear']
+print(len(CHANNELS))
 
 # Initialize Telegram Client
 client = TelegramClient('session_name', API_ID, API_HASH)
 
 def clean_text(text):
     """Tokenize and normalize Amharic text"""
-    text = re.sub(r'[^/u1200-/u137F/s]', '', text)  # Keep only Amharic Unicode range
+    text = re.sub(r'[^\u1200-\u137F\s]', '', text)  # Keep only Amharic Unicode range
     text = text.strip()
     return text
 
@@ -59,7 +69,7 @@ def store_data(messages):
     """Store messages in structured format"""
     df = pd.DataFrame(messages, columns=['Sender', 'Timestamp', 'Message'])
     df['Timestamp'] = df['Timestamp'].apply(lambda x: x.strftime('%Y-%m-%d %H:%M:%S'))
-    df.to_csv('C:/Users/ibsan/Desktop/TenX/week-5/data/raw_telegram_messages.csv', index=False)
+    df.to_csv(os.path.join(os.path.dirname(__file__), '..', 'data', 'raw_telegram_messages.csv'), index=False)
     print("Data saved successfully!")
 
 if __name__ == "__main__":
