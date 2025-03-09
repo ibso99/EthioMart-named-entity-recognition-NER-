@@ -2,3 +2,4 @@ data/
 results/
 .env
 model_output/
+fine-tuned-model/
