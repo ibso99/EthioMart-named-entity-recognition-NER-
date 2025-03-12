@@ -2,3 +2,5 @@ telethon
 pandas
 python-dotenv
 matplotlib
+shap
+lime
