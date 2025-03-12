@@ -1,41 +1,35 @@
-**Project README**
-Amharic NER for Ethiopian Telegram E-commerce
-This project involves developing a Named Entity Recognition (NER) system for Amharic text from Ethiopian-based Telegram e-commerce channels. The objective is to identify entities like products, prices, and locations within messages shared in these channels.
+# Amharic NER for Ethiopian Telegram E-commerce
 
-**Objectives**
-Data Collection and Preprocessing: Set up a data ingestion system to fetch real-time messages (text, images, documents) from at least 5 Ethiopian Telegram e-commerce channels. Preprocess and clean the data for entity extraction.
-Data Labeling: Label a subset of the dataset in CoNLL format, identifying entities such as products, prices, and locations.
-Model Training and Comparison: Fine-tune and compare multiple NER models on the preprocessed and labeled dataset.
+## Overview
+This repository contains my work for developing a Named Entity Recognition (NER) system for Amharic text from Ethiopian-based Telegram e-commerce channels. The objective is to identify entities like products, prices, and locations within messages shared in these channels.
 
-**Data Collection (Task-1)**
-Use a custom scraper to identify and connect to at least 5 relevant Telegram channels for Ethiopian e-commerce.
-Collect messages containing both text and images.
-Preprocess text data, handle Amharic-specific linguistic features (e.g., normalization, tokenization), and clean it for entity extraction.
-Store the cleaned data in a structured format for further analysis.
+## Challenge Goals
 
-**Data Labeling (Task-2)**
-Label the Amharic text data for entities such as products, prices, and locations.
-Label a subset of the dataset in CoNLL format, which includes the following:
+The primary objective of this repo is to analyze Amharic text data to:
+1. **Identify entities**: Extract entities such as products, prices, and locations from Telegram messages.
+2. **Fine-tune NER models**: Fine-tune and compare multiple NER models on the preprocessed and labeled dataset.
+3. **Evaluate model performance**: Evaluate the performance of the fine-tuned models and compare their accuracy.
+
+## Data Source
+The data is collected from Ethiopian Telegram e-commerce channels. The dataset includes both raw and labeled messages.
 
 ## Structure
 
-The repository is organized into the following folders, and branches (following naming conventions).
+The repository is organized into the following folders and branches (following naming conventions).
 
 - **`data/`**: Contains the raw and processed data files.
 - **`notebooks/`**: Jupyter notebooks documenting the Exploratory Data Analysis (EDA), Data version control, hypothesis testing, statistical modeling, and analysis processes.
-
-- **`src/`**: Contains Python scripts used for data preprocessing
-- `**task-1**: Data scraping
-- `**task-2**: (EDA & Statistics)
-- `**task-3**: Fine Tuning
-- `**task-4**: Model comparison
-- `**task-5**: Branch for model interpreteability
-
-# Project Overview
-
-This project involves fine-tuning and comparing different transformer models for Named Entity Recognition (NER) tasks. The work is divided into several key tasks, each with specific objectives and deliverables.
+- **`src/`**: Contains Python scripts used for data preprocessing, model building, and evaluation.
+- **`reports/`**: Contains the interim and final reports.
+- `**task-1**: Branch for data scraping.
+- `**task-2**: Branch for EDA & Statistics.
+- `**task-3**: Branch for fine-tuning models.
+- `**task-4**: Branch for model comparison.
+- `**task-5**: Branch for model interpretability.
 
 ## Key Tasks
+
+The work is divided into several key tasks, each with specific objectives.
 
 ### Task 1: Exploratory Data Analysis (EDA) & Stats
 
@@ -83,8 +77,8 @@ This project involves fine-tuning and comparing different transformer models for
 
 1. **Clone the Repository**:
     ```bash
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone https://github.com/ibso99/EthioMart-named-entity-recognition-NER-.git
+    cd EthioMart-named-entity-recognition-NER-
     ```
 
 2. **Install Dependencies**:
@@ -116,4 +110,3 @@ This project involves fine-tuning and comparing different transformer models for
     - Run the cells in `Model_Interpritability.ipynb` to interpret the results and understand the model predictions.
 
 By following these steps, you will be able to reproduce the results and gain insights into the performance of different transformer models for NER tasks.
-
